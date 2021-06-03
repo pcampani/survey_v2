@@ -34,7 +34,7 @@ class SurveyModel extends Model {
 	
 		return response_data;		
 	}
-
+	/*Function that handles creating survey*/
 	async createSurvey(name, dojo_location, fave_lang, comment){
 		let insert_survey_query = Mysql.format(`
 				INSERT INTO surveys(surveys.name, surveys.location, surveys.favorite_language, surveys.comment)

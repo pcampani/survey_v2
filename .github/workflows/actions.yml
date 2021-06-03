@@ -1,7 +1,10 @@
 name: Github Actions Debug
 
 on:
-  
+  pull-request:
+  push:
+    branches: 
+      - develop
 
 jobs:
   build:
