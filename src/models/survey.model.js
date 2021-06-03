@@ -43,7 +43,7 @@ class SurveyModel extends Model {
 			);
 		await this.executeQuery(insert_survey_query);
 	}
-
+	/*Generate captcha function*/
 	generateCaptcha(){
 		return Math.random().toString(36).substring(7); 
 	}
