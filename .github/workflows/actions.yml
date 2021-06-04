@@ -21,7 +21,7 @@ jobs:
         run: docker-compose -f "docker-compose.yml" up -d --build
 
       - name: Run tests from the built image
-        - run: docker run survey-form sh -c "npm test"
-        
+        run: docker run survey-form sh -c "npm test"
+
       - name: Compose down the docker
-        - run: docker-compose -f "docker-compose.yml" down
+        run: docker-compose -f "docker-compose.yml" down
