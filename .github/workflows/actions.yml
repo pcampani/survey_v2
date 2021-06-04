@@ -1,4 +1,4 @@
-name: Jenkins Pull Request
+name: Jenkins Pull Request Assignment
 
 on:
   pull_request:
