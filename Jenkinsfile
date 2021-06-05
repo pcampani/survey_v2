@@ -1,4 +1,5 @@
 pipeline {
+    agent { dockerfile true  }
     stages {
         stage('Build') {
             agent { dockerfile true  }
@@ -15,7 +16,6 @@ pipeline {
             }
         }
         stage('Compose Down') {
-            agent { dockerfile true  }
             steps {
                 echo 'Closing container....'
                 sh 'docker-compose -f "docker-compose.yml" down'
