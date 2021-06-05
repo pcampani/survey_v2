@@ -1,17 +1,15 @@
 pipeline {
-    agent {
-        docker { image 'node:14.4.0-alpine3.12' }
-    }
+    agent any
     stages {
         stage('Build') {
-            agent { dockerfile true  }
+            agent any
             steps {
                 echo 'Building..'
                 sh 'docker-compose -f "docker-compose.yml" up -d --build'
             }
         }
         stage('Test') {
-            agent { dockerfile true  }
+            agent any
             steps {
                 echo 'Testing..'
                 sh 'docker run survey-form-v2:latest sh -c "npm test"'
