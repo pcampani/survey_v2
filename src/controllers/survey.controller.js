@@ -16,7 +16,7 @@ class SurveyController extends Controller {
         
         res.render("layouts/survey.layout.ejs", this.page_params);
     }
-
+    /*Success handlef for the survey result*/
     async success(req, res) {
         let response_data = await SurveyModel.getSurvey();
 		this.page_params.PAGE.title = "Success!";
