@@ -16,7 +16,7 @@ class SurveyController extends Controller {
         
         res.render("layouts/survey.layout.ejs", this.page_params);
     }
-
+    /*Success handlef for the survey result*/
     async success(req, res) {
         let response_data = await SurveyModel.getSurvey();
 		this.page_params.PAGE.title = "Success!";
@@ -27,7 +27,7 @@ class SurveyController extends Controller {
     
         res.render("layouts/survey.layout.ejs", this.page_params);
     }
-
+    /*Trigger build in jenkins on git pull request*/
     async process(req, res) {
         await SurveyModel.createSurvey(req.body.name, req.body.dojo_location, req.body.fave_lang, req.body.comment);
         res.redirect("/success");
